@@ -18,3 +18,8 @@ a {
 * {
 	box-sizing: border-box;
 }
+
+.fullScreen {
+	height: 100vh;
+	width: 100vw;
+}

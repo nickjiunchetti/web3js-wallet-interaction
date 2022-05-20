@@ -4,11 +4,15 @@ type Props = {
 	classes?: string
 }
 
-export default function Button({ onUsePercentage, balance, classes }: Props) {
-	const percentageClass = `w-full py-1 px-2 text-blue-400 border-r border-blue-400`
+export default function Button({
+	onUsePercentage,
+	balance,
+	classes = ''
+}: Props) {
+	const percentageClass = `w-full py-1 px-2 text-blue-300 border-r border-blue-300 hover:bg-blue-300/50`
 
 	return (
-		<div className={`flex border border-blue-400 rounded-lg ${classes}`}>
+		<div className={`flex border border-blue-300 rounded-lg ${classes}`}>
 			<button
 				className={percentageClass}
 				onClick={() => onUsePercentage(0.1 * balance)}
