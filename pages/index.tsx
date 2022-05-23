@@ -102,6 +102,7 @@ const Home: NextPage = () => {
 		sendTransaction(
 			walletInfo.account,
 			receiverAddress,
+			token,
 			sendAmount,
 			onTransactionHash,
 			onTransactionReceipt,
@@ -231,8 +232,8 @@ const Home: NextPage = () => {
 									From: {walletInfo.account}
 								</p>
 								<img
-									src="/icons/arrow-down.svg"
-									width={26}
+									src="/icons/arrow-down.png"
+									width={35}
 									className="mx-auto my-8"
 								/>
 								<p className="text-xs whitespace-nowrap">
@@ -257,6 +258,7 @@ const Home: NextPage = () => {
 								<Button
 									onClick={() => setPageStep('send')}
 									classes="w-40 mt-5"
+									secondary={true}
 								>
 									CANCEL
 								</Button>
@@ -265,13 +267,21 @@ const Home: NextPage = () => {
 					)}
 					{pageStep === 'details' && (
 						<div className="flex flex-col items-center">
-							<h1>Transaction Details</h1>
-							<div>icon</div>
-							<p>Status {transaction.status}</p>
+							<h1 className="text-2xl mb-6">
+								Transaction Details
+							</h1>
+							<img
+								src="/icons/check.svg"
+								height={24}
+								className=""
+							/>
+							<p className="text-gray-10">
+								Status {transaction.status}
+							</p>
 							{transaction.transactionHash && (
-								<div className="flex">
+								<div className="flex text-sm mt-6">
 									<p className="mr-2">Tx Hash: </p>
-									<p>
+									<p className="text-yellow-400">
 										{transaction.transactionHash.slice(
 											0,
 											9
@@ -285,7 +295,8 @@ const Home: NextPage = () => {
 							)}
 							<Button
 								onClick={() => setPageStep('send')}
-								classes="w-40 mt-5"
+								classes="w-40 mt-6"
+								secondary={true}
 							>
 								CLOSE
 							</Button>

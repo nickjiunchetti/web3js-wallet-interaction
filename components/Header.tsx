@@ -1,3 +1,5 @@
+import Jazzicon from 'react-jazzicon'
+
 type walletInfo = {
 	connected: boolean
 	balance: { eth: number; weenus: number }
@@ -24,13 +26,16 @@ export default function Header({
 			<img src="/icons/logo.svg" width={175} />
 			{walletInfo.connected ? (
 				<div className="flex">
-					<div className="flex bg-gray-200 rounded-lg rounded-r-none pr-2 py-2 px-3">
+					<div className="flex items-center bg-gray-200 rounded-lg rounded-r-none pr-2 py-2 px-3">
 						<p className="mr-2">
 							{walletInfo.account.slice(0, 4) +
 								'....' +
 								walletInfo.account.slice(-4)}
-						</p>
-						<div>user image</div>
+						</p>{' '}
+						<Jazzicon
+							diameter={20}
+							seed={parseInt(walletInfo.account.slice(2, 10), 16)} // same seed that metamasks uses
+						/>
 					</div>
 					<img
 						onClick={disconnect}
@@ -41,7 +46,7 @@ export default function Header({
 			) : (
 				<button
 					onClick={connect}
-					className="px-4 py-2 text-yellow-400 border-yellow-400 border rounded-lg hover:bg-yellow-400 hover:text-black"
+					className="px-6 py-2 text-yellow-400 border-yellow-400 border rounded-lg hover:text-yellow-400/70 hover:border-yellow-400/30"
 				>
 					Engage Wallet
 				</button>
