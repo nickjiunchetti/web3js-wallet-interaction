@@ -8,4 +8,4 @@ npm run dev
 yarn dev
 ```
 
-Then, open [http://localhost:3000](http://localhost:3000) with your browser to see the dApp.
+Then, open [http://localhost:3000](http://localhost:3000) with your browser to intereact with the dApp.
