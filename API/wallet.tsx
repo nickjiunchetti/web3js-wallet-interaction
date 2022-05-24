@@ -87,16 +87,4 @@ export const sendTransaction = async (
 		.on('error', ({ code, message }: { code: number; message: string }) => {
 			onTransactionError(code, message)
 		})
-
-	// window.web3.eth
-	// 	.sendTransaction(transactionObject)
-	// 	.on('transactionHash', (hash: string) => {
-	// 		onTransactionHash(hash)
-	// 	})
-	// 	.on('receipt', (receipt: { transactionHash: string }) => {
-	// 		onTransactionReceipt(receipt.transactionHash)
-	// 	})
-	// 	.on('error', ({ code, message }: { code: number; message: string }) => {
-	// 		onTransactionError(code, message)
-	// 	})
 }
