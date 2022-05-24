@@ -31,7 +31,7 @@ export default function Header({
 							{walletInfo.account.slice(0, 4) +
 								'....' +
 								walletInfo.account.slice(-4)}
-						</p>{' '}
+						</p>
 						<Jazzicon
 							diameter={20}
 							seed={parseInt(walletInfo.account.slice(2, 10), 16)} // same seed that metamasks uses

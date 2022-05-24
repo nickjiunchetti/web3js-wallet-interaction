@@ -88,7 +88,7 @@ const Home: NextPage = () => {
 				...walletInfo,
 				balance: newWalletBalance
 			})
-			console.log(transaction, transaction.transactionHash)
+
 			alert(`Transaction Successful\nTxHash: ${hash}`)
 		}
 
