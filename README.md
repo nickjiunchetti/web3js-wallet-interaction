@@ -1,11 +1,19 @@
 ## Getting Started
 
-First, run the development server:
+First, intall depedencies:
 
 ```bash
-npm run dev
+yarn
 # or
-yarn dev
+npm install
 ```
 
-Then, open [http://localhost:3000](http://localhost:3000) with your browser to intereact with the dApp.
+Then, run the development server:
+
+```bash
+yarn dev
+# or
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to interact with the dApp.
