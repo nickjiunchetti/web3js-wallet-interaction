@@ -1,6 +1,8 @@
 ## Getting Started
 
-First, intall depedencies:
+Change your metamask network to Ropsten test network.
+
+To run the project, first, intall depedencies:
 
 ```bash
 yarn
